@@ -1,0 +1,145 @@
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /*altera a cor de fundo*/
+    background-color: rgb(235, 235, 235);
+    /*alinha o texto no centro*/
+    text-align:center;
+    /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVozb3HCQyLDfa1chyBAkh-Lv11mvJEhS5rA&s"); */
+    background-size: cover;
+    color:rgb(247, 5, 5);
+    margin: 0px;
+    padding: 0px;
+}
+    section{
+background-color:rgba(0, 0, 0, 0.575);
+width: 500px;
+margin: auto;
+border-radius: 30px
+    }
+
+ section{
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    margin:auto;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+   box-shadow:10px 10px 20px rgb(0,0,0);
+   animation: animacao 3s alternate infinite;
+ }
+
+ @keyframes animacao{
+    0%{box-shadow: 2px 4px 10px rgb(226, 226, 226) ; background-color: rgb(14, 8, 2);}
+    25%{box-shadow: 2px 4px 10px purple ;}
+    50%{box-shadow: 2px 4px 10px yellowgreen ;}
+    75%{box-shadow: 2px 4px 10px aqua;}
+    100%{box-shadow: 2px 4px 10px blue;}
+
+ }
+    
+    #perfil{
+        border: radius 10px;
+        width: 600px;
+        border: 5px solid  rgb(145, 33, 33);
+        box-shadow: 10px 10px 10px rgb(10, 1, 1);
+    }
+section:hover{
+    background-color: rgb(170, 201, 201);
+    transition: 2s ;
+    font-size: 20px ;
+}
+header{
+    background-color: black;
+}
+
+
+.menu{
+    background-color: rgb(29, 26, 26);
+}
+.menu ul{
+    margin: 0px;
+}
+
+
+
+.menu ul li {
+    display:inline-block;
+    padding: 10px;
+    width: 190px;
+}
+.menu ul li a {
+
+    color:rgb(0, 38, 252);
+    text-decoration: none;
+    color:rgb(240, 240, 240);
+}
+.logo{
+    border-radius: 10px;
+    width: 40px; 
+}
+
+.rodape{
+    /*cor do rodapé*/
+    background-color: rgba(0, 0, 0, 0.704);
+    /*cor da letra*/
+    color: white; 
+    /*margem de cima*/
+    margin-top: 40px;
+    /*espaçamento interno*/
+    padding-top: 20px;
+
+}
+menu ul{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+}
+
+#redes ul li a{
+    color: black;    /*  cor da letra */
+    text-decoration: none;  
+
+}
+.celular{
+    /* desapareça o incone menu na versão desktop  */
+    display: none; 
+}
+
+
+
+/* defenindo configuração do modo celular  */
+@media(max-width:1050px){
+    .menu ul {
+        display: none; /*desaparece lista do menu*/
+    }
+    .celular{
+        display: block; /*aparece menu hamburguer do celular*/
+        text-align:left;
+        padding: 0px;
+
+    }
+    ul.mostraMenu{
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

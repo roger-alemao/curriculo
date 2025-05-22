@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu site</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="estilo.css">
+<body>
+    <!--cabeçalho do meu site -->
+    <header>
+        <nav class="menu">
+            <div class="celular"> &#9776 menu </div>
+            <ul>
+              <li> <a href="#inicio"> Informações pessoais</a> </li>
+              <li> <a href="#endereco"> endereço</a> </li>
+              <li> <a href="#experiência"> experiência</a> </li>
+              <li> <a href="#formacao"> formação</a> </li>
+              <li> <a href="#redes"> contato</a> </li>
+              
+              <button onclick="mudarTamanhoFonte(1)">A+</button>
+              <button onclick="mudarTamanhoFonte(-1)">A-</button>
+              <button onclick="toggleContrast()">Contraste</button>
+              <button onclick="lerTexto()">🔊 Ler Página</button>
+              <button onclick="resetAcessibilidade()">Resetar</button>
+            </ul>
+          </nav>
+        </header>
+        <main>
+    <h1>olá mundo</h1>
+<p>aprendendo html! esse é um parágrafo.</p>
+<section class="intro" id="inicio">
+
+    <h2>roger rodrigues</h2>
+    <p>programador Full-Stack</p>
+     <img width="500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDRRP7bXMF2A4aXt8HRbm00lM2ZXYfZsnCbA&" alt>
+    <h3>informações pessoais</h3>
+<ul>
+    <li>telefone:(44)99760-1595</li>    
+    <li>email:roger.6967@aluno.pr.senac.br</li>
+</ul>
+</section>
+<section id="endereco">
+    <h3>endereço</h3>
+    <ul class="informacoes">    
+        <li>número:576</li>    
+        <li>av. Fioravante josé montanher</li>
+        <li>Bairro: centro</li>
+        <li>complemento: próximo a delegacia</li>
+    </ul>
+    <iframe width="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1093.828365900372!2d-52.988947886429784!3d-22.758499605865374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948d974a391b5927%3A0x7f46d31a3f75d62a!2sSesc%20Nova%20Londrina!5e0!3m2!1spt-PT!2sbr!4v1742426625792!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<section id="formacao">
+    <h2>formação</h2>
+<ul>
+    <li>colégio estadual vale do tigre</li>
+    <li>formando técnico de informática</li>
+    <li>ensino médio Completo</li>
+    <!-- <li></li> -->
+</ul>
+</section>
+
+<section id="experiência">
+    <h2>experiência</h2>
+<ul>
+    <li>primeiro trabalho mecânica automotiva</li>
+    <li>costureiro,ensacador,operador de empilhadeira</li>
+    <li>trabalho atualmente incol alimentos</li>
+    
+</ul>
+</section>
+
+<section id="redes">
+
+    <h3>redes sociais</h3>
+    <ul>
+    <li><a target="_blank" href="https://g1.globo.com/pr/norte-noroeste/cidade/nova-londrina/"><i class="fa-brands fa-facebook-f" style="color: #74C0FC;"></i>facebook</a></li>
+    <li><a href="sobre.html"><i class="fa-brands fa-youtube"></i>you tube</a></li>
+    <li><a href="sobre.html"><i class="fa-brands fa-instagram"></i>instagran</a></li>
+     <li><a href="sobre.html"><i class="fa-brands fa-youtube"></i>tik tok</a></li>
+    <!-- <li><a href="sobre.html"><i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-bitcoin"></i></a></li>
+    </ul> -->
+</section>
+
+
+<li> <img src="logo.png" alt="" width="40" class="logo"> </li>   
+
+
+ <footer class="rodape">
+        <p> Criado por <b> roger </b> (2025) </p>
+        <cite> Todos os direitos reservados</cite>
+        <br>
+        <progress></progress>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+<script>
+     function mudarTamanhoFonte(soma){
+        // tamanho de fonte = 16+1
+        // tamanho de fonte = 16+ -1
+       tamanhoFonte += soma;
+       document.body.style.fontSize = tamanhoFonte + 'px';
+     }
+      function toggleContrast(){
+        document.body.classList.toggle('altocontrate');
+        document.querySelectorAll('section').forEach(secao =>
+            secao.style.backgroundcolor = 'black';
+        
+        }
+    
+
+</script>
+</body>
+</html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Site Acessível Completo</title>
+  <style>
+    body {
+      font-size: 16px;
+      background-color: white;
+      color: black;
+      transition: all 0.3s;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+    .high-contrast {
+      background-color: rgb(0, 0, 0) !important;
+      color: rgb(248, 232, 8) !important;
+    }
+    .grayscale {
+      filter: grayscale(100%) !important;
+    }
+    .daltonismo {
+      filter: hue-rotate(90deg);
+    }
+    .toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #eee;
+      padding: 10px;
+      z-index: 999;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+    }
+    main {
+      margin-top: 80px;
+      padding: 20px;
+    }
+    a:focus, button:focus {
+      outline: 3px solid #00f;
+    }
+  </style>
+</head>
+<body>
+ 
+  
+  <!-- Plugin VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+	new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+    let tamanhoFonte = 16;
+
+	function mudarTamanhoFonte(soma) {
+	  tamanhoFonte += soma;
+	  document.body.style.fontSize = tamanhoFonte + 'px';
+	}
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    function lerTexto() {
+      const text = document.querySelector('main').innerText;
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'pt-BR';
+      speechSynthesis.speak(utterance);
+    }
+
+	function resetAcessibilidade() {
+	  document.body.classList.remove('high-contrast', 'grayscale', 'daltonismo');
+	  tamanhoFonte = 16;
+	  document.body.style.fontSize = tamanhoFonte + 'px';
+	  speechSynthesis.cancel();
+	}
+
+    // Atalhos de teclado
+    document.addEventListener('keydown', function(e) {
+      if (e.altKey && e.key === '1') changeFontSize(1);
+      if (e.altKey && e.key === '2') changeFontSize(-1);
+      if (e.altKey && e.key === '3') toggleContrast();
+      if (e.altKey && e.key === '4') toggleGrayscale();
+      if (e.altKey && e.key === '5') toggleDaltonismo();
+      if (e.altKey && e.key === '6') lerTexto();
+    });
+  </script>
+</body>
+</html>
